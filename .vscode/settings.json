@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "/home/venkat/projects/geollm/geollm-env/bin/python",
+  "python.analysis.extraPaths": ["./backend"]
+}

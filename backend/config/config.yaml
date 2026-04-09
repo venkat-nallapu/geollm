@@ -1,0 +1,36 @@
+app:
+  title: GeoLLM Backend
+  version: "0.1.0"
+  debug: true
+
+ollama:
+  base_url: "http://localhost:11434"
+  model: "mistral"           # swap to "geollm-mistral" after fine-tuning
+  timeout: 120               # seconds
+  stream: true
+
+embedding:
+  model: "all-MiniLM-L6-v2"  # fast, good quality, runs locally via sentence-transformers
+  chunk_size: 512             # tokens per chunk
+  chunk_overlap: 64
+
+vectorstore:
+  provider: "chroma"
+  persist_dir: "./data/vectorstore"
+  collection_prefix: "geollm_session_"
+
+database:
+  url: "sqlite+aiosqlite:///./data/geollm.db"
+
+document:
+  max_file_size_mb: 50
+  allowed_extensions: [".pdf", ".docx", ".doc", ".txt"]
+  max_pages: 60              # PDF page limit for extraction
+
+spt:
+  # SPT N-value thresholds per IS 2131 / IS 6403
+  very_loose_sand_max: 4
+  loose_sand_max: 10
+  medium_sand_max: 30
+  dense_sand_max: 50
+  liquefaction_concern_depth_m: 20   # check liquefaction in top 20m

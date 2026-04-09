@@ -1,0 +1,17 @@
+geollm-env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+.DS_Store
+*.egg-info/
+dist/
+build/
+*.egg
+*.tar.gz
+*.whl
+*.env
+.env/
