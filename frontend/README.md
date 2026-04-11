@@ -1,6 +1,6 @@
 # GeoLLM Frontend
 
-React + Vite chat interface for geotechnical report analysis using Mistral 7B via Ollama.
+React + Vite chat interface for geotechnical report analysis using qwen3.5 9b via Ollama.
 
 ## Setup
 
@@ -10,8 +10,8 @@ React + Vite chat interface for geotechnical report analysis using Mistral 7B vi
 # Install Ollama
 curl -fsSL https://ollama.ai/install.sh | sh
 
-# Pull Mistral 7B
-ollama pull mistral
+# Pull qwen3.5 9b
+ollama pull qwen3.5 9b
 
 # Start Ollama with CORS enabled (required for browser access)
 OLLAMA_ORIGINS="*" ollama serve
@@ -55,9 +55,9 @@ When your QLoRA fine-tuned model is ready:
 
 ```js
 // In App.jsx, change:
-const MODEL = "mistral";
+const MODEL = "qwen3.5 9b";
 // to:
-const MODEL = "geollm-mistral";  // your Ollama model name after ollama create
+const MODEL = "geollm-qwen";  // your Ollama model name after ollama create
 ```
 
 To register your GGUF model with Ollama:

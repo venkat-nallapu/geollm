@@ -5,7 +5,7 @@ app:
 
 ollama:
   base_url: "http://localhost:11434"
-  model: "mistral"           # swap to "geollm-mistral" after fine-tuning
+  model: "qwen3.5:9b"           # swap to "geollm-qwen3.5:9b" after fine-tuning
   timeout: 120               # seconds
   stream: true
 

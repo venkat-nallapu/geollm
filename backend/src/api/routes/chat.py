@@ -1,6 +1,6 @@
 """
 api/routes/chat.py
-POST /chat/stream  — RAG-augmented streaming chat with Mistral 7B via Ollama.
+POST /chat/stream  — RAG-augmented streaming chat with qwen3.5 9b via Ollama.
 GET  /chat/{session_id}/history — return full message history.
 """
 

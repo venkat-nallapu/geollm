@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 
 const BACKEND_URL = "http://localhost:8000";
+const OLLAMA_URL = "http://localhost:11434";
 
 const SYSTEM_PROMPT = `You are GeoLLM, a specialized AI assistant for geotechnical engineering. You analyze soil investigation reports, boring logs, and geotechnical documents.
 
@@ -243,6 +244,15 @@ async function processFile(file) {
 async function sendMessage(text) {
   const userText = (text || input).trim();
   if (!userText || isStreaming) return;
+
+   if (!sessionId) {
+    setMessages(prev => [...prev, {
+      role: "assistant",
+      content: "Please upload a geotechnical report first before asking questions.",
+      id: Date.now(),
+    }]);
+    return;
+  }
   setInput("");
 
   const userMsg = { role: "user", content: userText, id: Date.now() };
@@ -422,7 +432,7 @@ async function sendMessage(text) {
           <div style={{ display: "flex", alignItems: "center", fontSize: 12, color: "var(--color-text-secondary)" }}>
             <StatusDot connected={ollamaStatus === true} />
             <span>
-              {ollamaStatus === null ? "Checking..." : ollamaStatus ? `mistral` : "Ollama offline"}
+              {ollamaStatus === null ? "Checking..." : ollamaStatus ? `qwen3.5 9b` : "Ollama offline"}
             </span>
           </div>
         </div>
@@ -646,8 +656,8 @@ async function sendMessage(text) {
           marginTop: 8, textAlign: "center", lineHeight: 1.5,
         }}>
           {ollamaStatus === false
-            ? "⚠ Ollama not running — start with: ollama serve && ollama pull mistral"
-            : "Shift+Enter for new line · runs on Mistral 7B via Ollama"}
+            ? "⚠ Ollama not running — start with: ollama serve && ollama pull qwen3.5 9b"
+            : "Shift+Enter for new line · runs on Qwen 3.5 9B via Ollama"}
         </div>
       </div>
 

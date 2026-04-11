@@ -66,7 +66,7 @@ def _get_ollama_url() -> str:
 
 
 def _get_model() -> str:
-    return cfg("ollama", "model", default="mistral")
+    return cfg("ollama", "model", default="qwen3.5:9b")  # Default to Qwen 3.5 9B
 
 
 def _get_timeout() -> int:
