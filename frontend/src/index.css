@@ -50,6 +50,93 @@ body {
   }
 }
 
+/* ── Markdown rendering in GeoLLM responses ── */
+.geollm-response { line-height: 1.7; }
+
+.geollm-response h1,
+.geollm-response h2,
+.geollm-response h3 {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 14px 0 5px;
+  letter-spacing: -0.01em;
+}
+.geollm-response h1 { font-size: 15px; }
+.geollm-response h2 { font-size: 14px; }
+.geollm-response h3 { font-size: 13.5px; }
+
+.geollm-response p { margin-bottom: 8px; }
+.geollm-response p:last-child { margin-bottom: 0; }
+
+.geollm-response ul,
+.geollm-response ol {
+  padding-left: 20px;
+  margin: 6px 0 8px;
+}
+.geollm-response ul { list-style: disc; }
+.geollm-response ol { list-style: decimal; }
+.geollm-response li { margin-bottom: 3px; }
+
+.geollm-response strong { font-weight: 600; color: var(--color-text-primary); }
+.geollm-response em { font-style: italic; color: var(--color-text-secondary); }
+
+/* SPT tables */
+.geollm-response table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  margin: 10px 0;
+  font-family: var(--font-mono);
+}
+.geollm-response th {
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border-tertiary);
+  text-align: left;
+}
+.geollm-response td {
+  padding: 5px 10px;
+  border: 1px solid var(--color-border-tertiary);
+  color: var(--color-text-secondary);
+}
+
+/* Inline code */
+.geollm-response code {
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+/* Code blocks */
+.geollm-response pre {
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: 8px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+.geollm-response pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12.5px;
+}
+
+/* Blockquotes — useful for IS code citations */
+.geollm-response blockquote {
+  border-left: 3px solid #1D9E75;
+  padding: 4px 12px;
+  margin: 8px 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--color-border-secondary); border-radius: 4px; }

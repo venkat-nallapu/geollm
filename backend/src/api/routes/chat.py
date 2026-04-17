@@ -7,6 +7,8 @@ GET  /chat/{session_id}/history — return full message history.
 from __future__ import annotations
 
 import asyncio
+import json
+import token
 
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
@@ -56,7 +58,7 @@ async def chat_stream(req: ChatRequest):
             async for token in stream_chat(req.query, context_chunks, history):
                 collected_tokens.append(token)
                 # SSE format: data: <token>\n\n
-                yield f"data: {token}\n\n"
+                yield f"data: {json.dumps(token)}\n\n"
         except Exception as e:
             logger.error(f"Ollama stream error: {e}")
             yield f"data: [ERROR: {str(e)}]\n\n"

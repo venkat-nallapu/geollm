@@ -17,6 +17,9 @@ from src.client.session_store import init_db
 from src.utils.config import cfg
 from src.utils.logger import setup_logger
 
+from dotenv import load_dotenv
+load_dotenv()  # loads backend/.env automatically
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

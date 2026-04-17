@@ -28,7 +28,7 @@ def get_settings() -> dict:
 def cfg(*keys: str, default=None):
     """
     Dotted key access helper.
-    Usage: cfg("ollama", "model") -> "qwen3.5 9b"
+    Usage: cfg("ollama", "model") -> "llama3.2:3b"
     """
     settings = get_settings()
     val = settings

@@ -1,0 +1,126 @@
+[01;34m.[0m
+├── [01;34mbackend[0m
+│   ├── Dockerfile
+│   ├── README.md
+│   ├── [01;34m__pycache__[0m
+│   │   ├── chat.cpython-312.pyc
+│   │   └── main.cpython-312.pyc
+│   ├── [01;34mconfig[0m
+│   │   └── config.yaml
+│   ├── [01;34mdata[0m
+│   │   ├── geollm.db
+│   │   └── [01;34mvectorstore[0m
+│   ├── [01;34mlogs[0m
+│   ├── main.py
+│   ├── requirements.txt
+│   └── [01;34msrc[0m
+│       ├── __init__.py
+│       ├── [01;34m__pycache__[0m
+│       ├── [01;34mapi[0m
+│       ├── [01;34mclient[0m
+│       ├── [01;34mmodels[0m
+│       └── [01;34mutils[0m
+├── [01;34mfrontend[0m
+│   ├── README.md
+│   ├── index.html
+│   ├── [01;34mnode_modules[0m
+│   │   ├── [01;34m@babel[0m
+│   │   ├── [01;34m@esbuild[0m
+│   │   ├── [01;34m@jridgewell[0m
+│   │   ├── [01;34m@rolldown[0m
+│   │   ├── [01;34m@rollup[0m
+│   │   ├── [01;34m@types[0m
+│   │   ├── [01;34m@vitejs[0m
+│   │   ├── [01;34mbaseline-browser-mapping[0m
+│   │   ├── [01;34mbrowserslist[0m
+│   │   ├── [01;34mcaniuse-lite[0m
+│   │   ├── [01;34mconvert-source-map[0m
+│   │   ├── [01;34mdebug[0m
+│   │   ├── [01;34melectron-to-chromium[0m
+│   │   ├── [01;34mesbuild[0m
+│   │   ├── [01;34mescalade[0m
+│   │   ├── [01;34mgensync[0m
+│   │   ├── [01;34mjs-tokens[0m
+│   │   ├── [01;34mjsesc[0m
+│   │   ├── [01;34mjson5[0m
+│   │   ├── [01;34mloose-envify[0m
+│   │   ├── [01;34mlru-cache[0m
+│   │   ├── [01;34mms[0m
+│   │   ├── [01;34mnanoid[0m
+│   │   ├── [01;34mnode-releases[0m
+│   │   ├── [01;34mpicocolors[0m
+│   │   ├── [01;34mpostcss[0m
+│   │   ├── [01;34mreact[0m
+│   │   ├── [01;34mreact-dom[0m
+│   │   ├── [01;34mreact-refresh[0m
+│   │   ├── [01;34mrollup[0m
+│   │   ├── [01;34mscheduler[0m
+│   │   ├── [01;34msemver[0m
+│   │   ├── [01;34msource-map-js[0m
+│   │   ├── [01;34mupdate-browserslist-db[0m
+│   │   ├── [01;34mvite[0m
+│   │   └── [01;34myallist[0m
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── [01;34msrc[0m
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   └── vite.config.js
+├── [01;34mgeollm-env[0m
+│   ├── [01;34mbin[0m
+│   │   ├── Activate.ps1
+│   │   ├── [01;34m__pycache__[0m
+│   │   ├── activate
+│   │   ├── activate.csh
+│   │   ├── activate.fish
+│   │   ├── [01;32mchroma[0m
+│   │   ├── [01;32mdistro[0m
+│   │   ├── [01;32mdotenv[0m
+│   │   ├── [01;32mdumppdf.py[0m
+│   │   ├── [01;32memail_validator[0m
+│   │   ├── [01;32mf2py[0m
+│   │   ├── [01;32mhf[0m
+│   │   ├── [01;32mhttpx[0m
+│   │   ├── [01;32mhuggingface-cli[0m
+│   │   ├── [01;32misympy[0m
+│   │   ├── [01;32mmarkdown-it[0m
+│   │   ├── [01;32mnormalizer[0m
+│   │   ├── [01;32monnxruntime_test[0m
+│   │   ├── [01;32mopentelemetry-bootstrap[0m
+│   │   ├── [01;32mopentelemetry-instrument[0m
+│   │   ├── [01;32mpdf2txt.py[0m
+│   │   ├── [01;32mpdfplumber[0m
+│   │   ├── [01;32mpip[0m
+│   │   ├── [01;32mpip3[0m
+│   │   ├── [01;32mpip3.12[0m
+│   │   ├── [01;32mproton[0m
+│   │   ├── [01;32mproton-viewer[0m
+│   │   ├── [01;32mpygmentize[0m
+│   │   ├── [01;32mpypdfium2[0m
+│   │   ├── [01;32mpyproject-build[0m
+│   │   ├── [01;36mpython[0m -> [01;32mpython3[0m
+│   │   ├── [01;36mpython3[0m -> [01;32m/usr/bin/python3[0m
+│   │   ├── [01;36mpython3.12[0m -> [01;32mpython3[0m
+│   │   ├── [01;32mtiny-agents[0m
+│   │   ├── [01;32mtqdm[0m
+│   │   ├── [01;32mtransformers[0m
+│   │   ├── [01;32mtransformers-cli[0m
+│   │   ├── [01;32mtyper[0m
+│   │   ├── [01;32muvicorn[0m
+│   │   ├── [01;32mwatchfiles[0m
+│   │   ├── [01;32mwebsockets[0m
+│   │   └── [01;32mwsdump[0m
+│   ├── [01;34minclude[0m
+│   │   ├── [01;34mpython3.12[0m
+│   │   └── [01;34msite[0m
+│   ├── [01;34mlib[0m
+│   │   └── [01;34mpython3.12[0m
+│   ├── [01;36mlib64[0m -> [01;34mlib[0m
+│   ├── pyvenv.cfg
+│   └── [01;34mshare[0m
+│       └── [01;34mman[0m
+├── skeleton.txt
+└── structure.txt
+
+63 directories, 61 files
