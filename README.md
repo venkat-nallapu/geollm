@@ -23,23 +23,23 @@ Key capabilities:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                      React + Vite                        │
-│          (PDF upload · streaming chat · drag-drop)       │
+│                      React + Vite                       │
+│          (PDF upload · streaming chat · drag-drop)      │
 └──────────────────────┬──────────────────────────────────┘
                        │ HTTP / SSE
 ┌──────────────────────▼──────────────────────────────────┐
-│                    FastAPI Backend                        │
+│                    FastAPI Backend                      │
 │  ┌─────────────┐  ┌──────────────┐  ┌────────────────┐  │
 │  │ PDF/DOCX    │  │  RAG Engine  │  │  Chat History  │  │
 │  │ Extraction  │  │  (Hybrid)    │  │  (SQLite)      │  │
 │  │ pdfplumber  │  │  BM25+FAISS  │  │                │  │
 │  │ python-docx │  │  BGE-M3      │  │                │  │
 │  └─────────────┘  └──────┬───────┘  └────────────────┘  │
-│                          │ Retrieve                       │
-│  ┌───────────────────────▼────────────────────────────┐  │
-│  │         Fine-tuned Mistral 7B (QLoRA / GGUF)       │  │
-│  │         served via Ollama                           │  │
-│  └────────────────────────────────────────────────────┘  │
+│                          │ Retrieve                     │
+│  ┌───────────────────────▼───────────────────────────┐  │
+│  │         Fine-tuned Mistral 7B (QLoRA / GGUF)      │  │
+│  │         served via Ollama                         │  │
+│  └───────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -64,36 +64,6 @@ Handles two primary report formats found in Indian geotechnical practice:
 - **Format B** — BORE/DRILL LOG multi-line cell layouts
 
 Raw PDFs → custom extractors → structured SPT N-value records → Pydantic validation → ChatML JSONL for fine-tuning.
-
----
-
-## Project Structure
-
-```
-geollm/
-├── backend/
-│   ├── main.py               # FastAPI entry point
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   ├── config/
-│   │   └── config.yaml
-│   ├── data/
-│   │   ├── geollm.db         # SQLite chat history
-│   │   └── vectorstore/      # FAISS index
-│   └── src/
-│       ├── api/              # Route handlers
-│       ├── client/           # LLM client (Ollama)
-│       ├── models/           # Pydantic schemas
-│       └── utils/            # Extraction, retrieval helpers
-├── frontend/
-│   ├── index.html
-│   ├── vite.config.js
-│   └── src/
-│       ├── App.jsx           # Main application component
-│       ├── main.jsx
-│       └── index.css
-└── skeleton.txt              # Full directory tree
-```
 
 ---
 
@@ -129,6 +99,8 @@ npm run dev
 ```
 
 The app will be available at `http://localhost:5173`.
+
+OR Just run: `https://geollm.axialnet.in` on your browser
 
 ### Model Setup (Ollama)
 
@@ -201,7 +173,7 @@ Training target: SPT N-value recall ≥ 0.90.
 
 ## Contributing
 
-This project is in active development. If you work in geotechnical engineering or ML and want to contribute training data or model improvements, reach out at [venkat@axialnet.in](mailto:venkat@axialnet.in).
+This project is in active development. If you work in ML engineering or System arch and want to contribute training data or model improvements, reach out at [gmail](mailto:nallapuvenkat6@gmail.com), [linkedln](www.linkedln.com/in/venkat-nallapu).
 
 ---
 
