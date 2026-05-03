@@ -1,3 +1,9 @@
+phase 26 updated
+
+
+
+-----
+
 # GeoLLM
 
 **A domain-adapted LLM for Indian geotechnical engineering** — built on top of Mistral 7B with QLoRA fine-tuning and a hybrid RAG pipeline, designed to interpret site investigation reports, extract SPT N-values, and assist geotechnical engineers with borehole data analysis.
